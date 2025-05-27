@@ -17,8 +17,9 @@
     async function verifyGuest() {
       const input = document.getElementById("guestInput").value.trim();
       const response = await fetch(
-        `https://script.google.com/macros/s/AKfycbwhNozeqdHЗgF9aoUZRjocYKJJ72ZQQ6mDjLX1tnT0Z1B0x_1-i5аAQЗ|Bth1UyjoF6/exec?query=${encodeURIComponent(input)}`
-      );
+  `https://script.google.com/macros/s/AKfycbwhNozeqdH3gF9aoUZRjocYKJJ72ZQQ6mDjLX1tnT0Z1B0x_1-i5aAQ3lBth1UyjoF6/exec?code=${encodeURIComponent(input)}`
+);
+
       const data = await response.json();
       const resultDiv = document.getElementById("result");
 

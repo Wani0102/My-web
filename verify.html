@@ -23,7 +23,7 @@
       const data = await response.json();
       const resultDiv = document.getElementById("result");
 
-      if (data.found) {
+      if (data.name) {
         resultDiv.innerHTML = `
           <h3>Access Granted 🎉</h3>
           <p><strong>Name:</strong> ${data.name}</p>

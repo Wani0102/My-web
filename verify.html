@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,10 +15,9 @@
   <script>
     async function verifyGuest() {
       const input = document.getElementById("guestInput").value.trim();
-     const response = await fetch(
-  `https://script.google.com/macros/s/AKfycbwFQpD_Dg0E83p32flk0ZvtkbXL69o2pmB5MGZrQDMynUy4Me_RVXlaYdoCDqPLk8C5/exec?code=${encodeURIComponent(input)}`
-);
-
+      const response = await fetch(
+        `https://script.google.com/macros/s/AKfycbwFQpD_Dg0E83p32flk0ZvtkbXL69o2pmB5MGZrQDMynUy4Me_RVXlaYdoCDqPLk8C5/exec?code=${encodeURIComponent(input)}`
+      );
 
       const data = await response.json();
       const resultDiv = document.getElementById("result");
@@ -29,8 +27,7 @@
           <h3>Access Granted 🎉</h3>
           <p><strong>Name:</strong> ${data.name}</p>
           <p><strong>Category:</strong> ${data.category}</p>
-          <p><strong>Seating:</strong> ${data.tableMapping}</p>
-
+          <p><strong>Seating:</strong> ${data.seating}</p>
         `;
       } else {
         resultDiv.innerHTML = `<p style="color:red;">Guest not found. Please check your name or code again.</p>`;
